@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern, responsive Quiz Application built with Vanilla JavaScript.">
+    <title>JS Quiz Master</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1>QuizMaster</h1>
+            </div>
+            <div class="header-controls">
+                <button id="highscores-btn" class="icon-btn" aria-label="View High Scores" title="High Scores">
+                    🏆 <span class="btn-text">Scores</span>
+                </button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark Mode" title="Toggle Theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Start Screen -->
+            <section id="start-screen" class="screen active">
+                <div class="card intro-card">
+                    <h2>Welcome to the Challenge!</h2>
+                    <p class="subtitle">Test your knowledge with our dynamic quiz.</p>
+
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="icon">📝</span>
+                            <span>10 Questions</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">⏱️</span>
+                            <span>15s per Question</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">🎯</span>
+                            <span>Multiple Choice</span>
+                        </div>
+                    </div>
+
+                    <button id="start-btn" class="primary-btn pulse">Start Quiz</button>
+                </div>
+            </section>
+
+            <!-- Quiz Screen -->
+            <section id="quiz-screen" class="screen hidden">
+                <div class="card quiz-card">
+                    <div class="quiz-header">
+                        <div class="progress-container">
+                            <div class="progress-labels">
+                                <span id="question-count">Question 1/10</span>
+                                <span id="score-display">Score: 0</span>
+                            </div>
+                            <div class="progress-bar-track">
+                                <div id="progress-bar-fill" class="progress-bar-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="timer-container">
+                            <svg class="timer-ring" width="60" height="60">
+                                <circle class="timer-ring-circle-bg" stroke="var(--surface-color-variant)"
+                                    stroke-width="4" fill="transparent" r="26" cx="30" cy="30" />
+                                <circle id="timer-ring-circle" class="timer-ring-circle" stroke="var(--primary-color)"
+                                    stroke-width="4" fill="transparent" r="26" cx="30" cy="30" />
+                            </svg>
+                            <span id="timer-text">15</span>
+                        </div>
+                    </div>
+
+                    <div class="question-container">
+                        <h3 id="question-text">Loading question...</h3>
+                    </div>
+
+                    <div id="options-container" class="options-grid">
+                        <!-- Options injected via JS -->
+                    </div>
+
+                    <div id="feedback-container" class="feedback hidden">
+                        <p id="feedback-text"></p>
+                        <p id="explanation-text" class="explanation"></p>
+                    </div>
+
+                    <div class="quiz-footer">
+                        <button id="next-btn" class="secondary-btn hidden">Next Question</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Screen -->
+            <section id="result-screen" class="screen hidden">
+                <div class="card result-card">
+                    <div class="result-header">
+                        <span class="result-emoji">🎉</span>
+                        <h2>Quiz Completed!</h2>
+                    </div>
+
+                    <div class="score-container">
+                        <div class="score-circle">
+                            <span id="final-score-value">0</span>
+                            <span class="total-score">/ 100</span>
+                        </div>
+                        <p id="result-message">Great job!</p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-label">Correct</span>
+                            <span id="stat-correct" class="stat-value correct">0</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Wrong</span>
+                            <span id="stat-wrong" class="stat-value wrong">0</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Time</span>
+                            <span id="stat-time" class="stat-value">0s</span>
+                        </div>
+                    </div>
+
+                    <div class="result-actions">
+                        <button id="restart-btn" class="primary-btn">Play Again</button>
+                        <button id="home-btn" class="secondary-btn">Home</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- High Scores Modal -->
+            <div id="highscores-modal" class="modal hidden">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>High Scores</h3>
+                        <button id="close-modal" class="close-btn">&times;</button>
+                    </div>
+                    <ul id="highscores-list" class="scores-list">
+                        <!-- Scores injected here -->
+                    </ul>
+                    <button id="clear-scores" class="text-btn">Clear History</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2024 QuizMaster. Built with Vanilla JS.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

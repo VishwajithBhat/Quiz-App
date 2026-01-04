@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "question": "What is the output of `typeof null` in JavaScript?",
+    "options": ["\"null\"", "\"object\"", "\"undefined\"", "\"number\""],
+    "answer": 1,
+    "explanation": "In JavaScript, `typeof null` returns \"object\". This is a known bug in the language unique to null."
+  },
+  {
+    "id": 2,
+    "question": "Which HTML5 element is used to specify a footer for a document or section?",
+    "options": ["<bottom>", "<footer>", "<section>", "<aside>"],
+    "answer": 1,
+    "explanation": "The <footer> element represents a footer for its nearest sectioning content or sectioning root element."
+  },
+  {
+    "id": 3,
+    "question": "What does CSS stand for?",
+    "options": [
+      "Creative Style Sheets",
+      "Computer Style Sheets",
+      "Cascading Style Sheets",
+      "Colorful Style Sheets"
+    ],
+    "answer": 2,
+    "explanation": "CSS stands for Cascading Style Sheets. It describes how HTML elements are to be displayed on screen."
+  },
+  {
+    "id": 4,
+    "question": "Which method updates the state of the history stack in the browser?",
+    "options": ["history.pushState()", "history.add()", "window.newState()", "Router.push()"],
+    "answer": 0,
+    "explanation": "`history.pushState()` adds an entry to the browser's session history stack."
+  },
+  {
+    "id": 5,
+    "question": "What is the purpose of the `z-index` property in CSS?",
+    "options": [
+      "To set the width of an element",
+      "To specify the stack order of an element",
+      "To set the transparency",
+      "To count the number of elements"
+    ],
+    "answer": 1,
+    "explanation": "The `z-index` property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order."
+  },
+  {
+    "id": 6,
+    "question": "In JavaScript, which of these is NOT a primitive type?",
+    "options": ["Boolean", "String", "Object", "Symbol"],
+    "answer": 2,
+    "explanation": "Objects are reference types in JavaScript. Primitives include String, Number, Boolean, Undefined, Null, Symbol, and BigInt."
+  },
+  {
+    "id": 7,
+    "question": "Which event occurs when the user clicks on an HTML element?",
+    "options": ["onchange", "onmouseover", "onmouseclick", "onclick"],
+    "answer": 3,
+    "explanation": "The `onclick` event occurs when the user clicks on an HTML element."
+  },
+  {
+    "id": 8,
+    "question": "What is the correct way to write a JavaScript array?",
+    "options": [
+      "var colors = \"red\", \"green\", \"blue\"",
+      "var colors = (1:\"red\", 2:\"green\", 3:\"blue\")",
+      "var colors = [\"red\", \"green\", \"blue\"]",
+      "var colors = 1 = (\"red\"), 2 = (\"green\"), 3 = (\"blue\")"
+    ],
+    "answer": 2,
+    "explanation": "Arrays are written with square brackets: `[\"red\", \"green\", \"blue\"]`."
+  },
+  {
+    "id": 9,
+    "question": "Which CSS property is used to change the text color of an element?",
+    "options": ["text-color", "fg-color", "color", "font-color"],
+    "answer": 2,
+    "explanation": "The `color` property is used to set the color of the text."
+  },
+  {
+    "id": 10,
+    "question": "What does the `===` operator do in JavaScript?",
+    "options": [
+      "Assigns a value",
+      "Compares values ignoring type",
+      "Compares both value and type",
+      "Checks if a variable exists"
+    ],
+    "answer": 2,
+    "explanation": "`===` is the strict equality operator. It checks whether its two operands are equal, returning a Boolean result. Unlike `==`, it does not attempt type conversion."
+  }
+]
